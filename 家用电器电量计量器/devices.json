@@ -1,0 +1,222 @@
+[
+  {
+    "id": "device_1734926040299",
+    "name": "摄像头",
+    "imageSrc": "http://localhost:8000/images/device_3_c0ff1d4f-bde9-4d0a-ae12-3159c5809a1d.jpg",
+    "idlePower": "3",
+    "workingPower": "3",
+    "workingHours": "24",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735107597543",
+    "name": "路由器+猫盘+光猫+插座",
+    "imageSrc": "http://localhost:8000/images/device_14_b4a7f462-8989-4bc2-a75c-3c1317b9fab2.jpg",
+    "idlePower": "21",
+    "workingPower": "25",
+    "workingHours": "24",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1734851530075",
+    "name": "海尔601wdce",
+    "imageSrc": "http://localhost:8000/images/device_4_1d0afa86-f5c4-436d-9bb2-d0de123fb6ec.jpg",
+    "idlePower": "9",
+    "workingPower": "15",
+    "workingHours": "2",
+    "workingDays": "30",
+    "enabled": false
+  },
+  {
+    "id": "device_1734851530075",
+    "name": "asus-飞牛",
+    "imageSrc": "http://localhost:8000/images/device_3_796c3a00-ad8d-4a60-a01b-09781390460c.jpg",
+    "idlePower": "10",
+    "workingPower": "24",
+    "workingHours": "1",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735094684224",
+    "name": "微波炉",
+    "imageSrc": "http://localhost:8000/images/device_10_2af764e8-cac8-47f9-bb48-95f0ce4cf9ae.jpg",
+    "idlePower": "0.05",
+    "workingPower": "1200",
+    "workingHours": "0.04",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735094635676",
+    "name": "油烟机",
+    "imageSrc": "http://localhost:8000/images/device_10_15694735-1d53-46c8-bfc8-f183ee04be50.jpg",
+    "idlePower": "0.6",
+    "workingPower": "180",
+    "workingHours": "1.5",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735094557779",
+    "name": "燃气热水器",
+    "imageSrc": "http://localhost:8000/images/device_8_f9f88ed3-e541-4e2e-a8ce-c3411521ce74.jpg",
+    "idlePower": "5.6",
+    "workingPower": "45",
+    "workingHours": "1",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735128036352",
+    "name": "净水器",
+    "imageSrc": "http://localhost:8000/images/device_14_933c7b11-1fa9-48c0-8c25-ce35266cf5c2.jpg",
+    "idlePower": "1.7",
+    "workingPower": "80",
+    "workingHours": "1",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735094645320",
+    "name": "烧水壶",
+    "imageSrc": "http://localhost:8000/images/device_13_06a68aab-b95e-48c2-9a5c-29b52dbaaeaf.jpg",
+    "idlePower": "0",
+    "workingPower": "1500",
+    "workingHours": "0.5",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735094667648",
+    "name": "客厅的灯",
+    "imageSrc": "http://localhost:8000/images/device_9_f9ccc8b6-ba95-4a68-a939-a7934437d3b0.jpg",
+    "idlePower": "0",
+    "workingPower": "80",
+    "workingHours": "0.5",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735800929102",
+    "name": "小米电视65",
+    "imageSrc": "http://localhost:8000/images/device_10_0e993c56-eb81-4a7f-822d-3e404518c0cf.jpg",
+    "idlePower": "0",
+    "workingPower": "120",
+    "workingHours": "0.2",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735800929710",
+    "name": "电饭锅",
+    "imageSrc": "http://localhost:8000/images/device_11_8dc45dd1-1b41-41e9-9d15-1a6b458c516a.jpg",
+    "idlePower": "0",
+    "workingPower": "800",
+    "workingHours": "0.4",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1734851530075",
+    "name": "火炉",
+    "imageSrc": "http://localhost:8000/images/device_4_01a020f4-9b15-4ad4-8b4f-8c188d5d630e.jpg",
+    "idlePower": "0",
+    "workingPower": "420",
+    "workingHours": "4.5",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1734851531788",
+    "name": "打印机",
+    "imageSrc": "http://localhost:8000/images/device_5_ac48dc67-837d-4d88-8dd6-9e2e8237b09e.jpg",
+    "idlePower": "1",
+    "workingPower": "1",
+    "workingHours": "24",
+    "workingDays": "30",
+    "enabled": false
+  },
+  {
+    "id": "device_1734851530075",
+    "name": "猫盘-群晖",
+    "imageSrc": "http://localhost:8000/images/device_0_aadd7de4-5c47-4b0f-96d0-2e78d83525c3.jpg",
+    "idlePower": "9",
+    "workingPower": "15",
+    "workingHours": "1",
+    "workingDays": "30",
+    "enabled": false
+  },
+  {
+    "id": "device_1734851530074",
+    "name": "电脑",
+    "imageSrc": "http://localhost:8000/images/device_1_109cc3e2-39ed-4122-8620-aa6e54fbe85a.jpg",
+    "idlePower": "6",
+    "workingPower": "120",
+    "workingHours": "9",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735094559564",
+    "name": "小米电量插座3",
+    "imageSrc": "http://localhost:8000/images/device_9_4c468cf9-d0e1-43e2-94ea-742b47662267.jpg",
+    "idlePower": "0.93",
+    "workingPower": "0.5",
+    "workingHours": "12",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735801320703",
+    "name": "水暖毯",
+    "imageSrc": "http://localhost:8000/images/device_17_09114599-b114-41d7-9a59-66a9c6ab2ac5.jpg",
+    "idlePower": "",
+    "workingPower": "",
+    "workingHours": "",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735092971086",
+    "name": "路灯",
+    "imageSrc": "http://localhost:8000/images/device_7_a046d0be-50d7-4334-b118-2566090b0e52.jpg",
+    "idlePower": "1.5",
+    "workingPower": "110",
+    "workingHours": "4.5",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735807664569",
+    "name": "",
+    "imageSrc": "http://localhost:8000/placeholder.jpg",
+    "idlePower": "",
+    "workingPower": "",
+    "workingHours": "",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735807809398",
+    "name": "",
+    "imageSrc": "http://localhost:8000/placeholder.jpg",
+    "idlePower": "",
+    "workingPower": "",
+    "workingHours": "",
+    "workingDays": "30",
+    "enabled": true
+  },
+  {
+    "id": "device_1735808083016",
+    "name": "",
+    "imageSrc": "http://localhost:8000/placeholder.jpg",
+    "idlePower": "",
+    "workingPower": "",
+    "workingHours": "",
+    "workingDays": "30",
+    "enabled": true
+  }
+]
