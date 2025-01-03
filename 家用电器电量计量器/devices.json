@@ -7,7 +7,8 @@
     "workingPower": "3",
     "workingHours": "24",
     "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "常开"
   },
   {
     "id": "device_1735107597543",
@@ -17,7 +18,8 @@
     "workingPower": "25",
     "workingHours": "24",
     "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "常开"
   },
   {
     "id": "device_1734851530075",
@@ -27,7 +29,8 @@
     "workingPower": "15",
     "workingHours": "2",
     "workingDays": "30",
-    "enabled": false
+    "enabled": false,
+    "group": "常开"
   },
   {
     "id": "device_1734851530075",
@@ -37,37 +40,8 @@
     "workingPower": "24",
     "workingHours": "1",
     "workingDays": "30",
-    "enabled": true
-  },
-  {
-    "id": "device_1735094684224",
-    "name": "微波炉",
-    "imageSrc": "http://localhost:8000/images/device_10_2af764e8-cac8-47f9-bb48-95f0ce4cf9ae.jpg",
-    "idlePower": "0.05",
-    "workingPower": "1200",
-    "workingHours": "0.04",
-    "workingDays": "30",
-    "enabled": true
-  },
-  {
-    "id": "device_1735094635676",
-    "name": "油烟机",
-    "imageSrc": "http://localhost:8000/images/device_10_15694735-1d53-46c8-bfc8-f183ee04be50.jpg",
-    "idlePower": "0.6",
-    "workingPower": "180",
-    "workingHours": "1.5",
-    "workingDays": "30",
-    "enabled": true
-  },
-  {
-    "id": "device_1735094557779",
-    "name": "燃气热水器",
-    "imageSrc": "http://localhost:8000/images/device_8_f9f88ed3-e541-4e2e-a8ce-c3411521ce74.jpg",
-    "idlePower": "5.6",
-    "workingPower": "45",
-    "workingHours": "1",
-    "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "常开"
   },
   {
     "id": "device_1735128036352",
@@ -77,57 +51,8 @@
     "workingPower": "80",
     "workingHours": "1",
     "workingDays": "30",
-    "enabled": true
-  },
-  {
-    "id": "device_1735094645320",
-    "name": "烧水壶",
-    "imageSrc": "http://localhost:8000/images/device_13_06a68aab-b95e-48c2-9a5c-29b52dbaaeaf.jpg",
-    "idlePower": "0",
-    "workingPower": "1500",
-    "workingHours": "0.5",
-    "workingDays": "30",
-    "enabled": true
-  },
-  {
-    "id": "device_1735094667648",
-    "name": "客厅的灯",
-    "imageSrc": "http://localhost:8000/images/device_9_f9ccc8b6-ba95-4a68-a939-a7934437d3b0.jpg",
-    "idlePower": "0",
-    "workingPower": "80",
-    "workingHours": "0.5",
-    "workingDays": "30",
-    "enabled": true
-  },
-  {
-    "id": "device_1735800929102",
-    "name": "小米电视65",
-    "imageSrc": "http://localhost:8000/images/device_10_0e993c56-eb81-4a7f-822d-3e404518c0cf.jpg",
-    "idlePower": "0",
-    "workingPower": "120",
-    "workingHours": "0.2",
-    "workingDays": "30",
-    "enabled": true
-  },
-  {
-    "id": "device_1735800929710",
-    "name": "电饭锅",
-    "imageSrc": "http://localhost:8000/images/device_11_8dc45dd1-1b41-41e9-9d15-1a6b458c516a.jpg",
-    "idlePower": "0",
-    "workingPower": "800",
-    "workingHours": "0.4",
-    "workingDays": "30",
-    "enabled": true
-  },
-  {
-    "id": "device_1734851530075",
-    "name": "火炉",
-    "imageSrc": "http://localhost:8000/images/device_4_01a020f4-9b15-4ad4-8b4f-8c188d5d630e.jpg",
-    "idlePower": "0",
-    "workingPower": "420",
-    "workingHours": "4.5",
-    "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "常开"
   },
   {
     "id": "device_1734851531788",
@@ -137,7 +62,8 @@
     "workingPower": "1",
     "workingHours": "24",
     "workingDays": "30",
-    "enabled": false
+    "enabled": false,
+    "group": "常开"
   },
   {
     "id": "device_1734851530075",
@@ -147,7 +73,30 @@
     "workingPower": "15",
     "workingHours": "1",
     "workingDays": "30",
-    "enabled": false
+    "enabled": false,
+    "group": "常开"
+  },
+  {
+    "id": "device_1735094635676",
+    "name": "油烟机",
+    "imageSrc": "http://localhost:8000/images/device_10_15694735-1d53-46c8-bfc8-f183ee04be50.jpg",
+    "idlePower": "0.6",
+    "workingPower": "180",
+    "workingHours": "1.5",
+    "workingDays": "30",
+    "enabled": true,
+    "group": "常开"
+  },
+  {
+    "id": "device_1735094557779",
+    "name": "燃气热水器",
+    "imageSrc": "http://localhost:8000/images/device_8_f9f88ed3-e541-4e2e-a8ce-c3411521ce74.jpg",
+    "idlePower": "5.6",
+    "workingPower": "45",
+    "workingHours": "1",
+    "workingDays": "30",
+    "enabled": true,
+    "group": "常开"
   },
   {
     "id": "device_1734851530074",
@@ -157,17 +106,19 @@
     "workingPower": "120",
     "workingHours": "9",
     "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "客厅"
   },
   {
-    "id": "device_1735094559564",
-    "name": "小米电量插座3",
-    "imageSrc": "http://localhost:8000/images/device_9_4c468cf9-d0e1-43e2-94ea-742b47662267.jpg",
-    "idlePower": "0.93",
-    "workingPower": "0.5",
-    "workingHours": "12",
+    "id": "device_1735800929102",
+    "name": "小米电视65",
+    "imageSrc": "http://localhost:8000/images/device_10_0e993c56-eb81-4a7f-822d-3e404518c0cf.jpg",
+    "idlePower": "0",
+    "workingPower": "120",
+    "workingHours": "0.2",
     "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "客厅"
   },
   {
     "id": "device_1735801320703",
@@ -177,7 +128,19 @@
     "workingPower": "",
     "workingHours": "",
     "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "客厅"
+  },
+  {
+    "id": "device_1734851530075",
+    "name": "火炉",
+    "imageSrc": "http://localhost:8000/images/device_4_01a020f4-9b15-4ad4-8b4f-8c188d5d630e.jpg",
+    "idlePower": "0",
+    "workingPower": "420",
+    "workingHours": "4.5",
+    "workingDays": "30",
+    "enabled": true,
+    "group": "客厅"
   },
   {
     "id": "device_1735092971086",
@@ -187,36 +150,62 @@
     "workingPower": "110",
     "workingHours": "4.5",
     "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "客厅"
   },
   {
-    "id": "device_1735807664569",
-    "name": "",
-    "imageSrc": "http://localhost:8000/placeholder.jpg",
-    "idlePower": "",
-    "workingPower": "",
-    "workingHours": "",
+    "id": "device_1735094667648",
+    "name": "客厅的灯",
+    "imageSrc": "http://localhost:8000/images/device_9_f9ccc8b6-ba95-4a68-a939-a7934437d3b0.jpg",
+    "idlePower": "0",
+    "workingPower": "80",
+    "workingHours": "0.5",
     "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "客厅"
   },
   {
-    "id": "device_1735807809398",
-    "name": "",
-    "imageSrc": "http://localhost:8000/placeholder.jpg",
-    "idlePower": "",
-    "workingPower": "",
-    "workingHours": "",
+    "id": "device_1735094559564",
+    "name": "小米电量插座3",
+    "imageSrc": "http://localhost:8000/images/device_9_4c468cf9-d0e1-43e2-94ea-742b47662267.jpg",
+    "idlePower": "0.93",
+    "workingPower": "0.5",
+    "workingHours": "12",
     "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "客厅"
   },
   {
-    "id": "device_1735808083016",
-    "name": "",
-    "imageSrc": "http://localhost:8000/placeholder.jpg",
-    "idlePower": "",
-    "workingPower": "",
-    "workingHours": "",
+    "id": "device_1735094645320",
+    "name": "烧水壶",
+    "imageSrc": "http://localhost:8000/images/device_13_06a68aab-b95e-48c2-9a5c-29b52dbaaeaf.jpg",
+    "idlePower": "0",
+    "workingPower": "1500",
+    "workingHours": "0.5",
     "workingDays": "30",
-    "enabled": true
+    "enabled": true,
+    "group": "厨房"
+  },
+  {
+    "id": "device_1735800929710",
+    "name": "电饭锅",
+    "imageSrc": "http://localhost:8000/images/device_11_8dc45dd1-1b41-41e9-9d15-1a6b458c516a.jpg",
+    "idlePower": "0",
+    "workingPower": "800",
+    "workingHours": "0.4",
+    "workingDays": "30",
+    "enabled": true,
+    "group": "厨房"
+  },
+  {
+    "id": "device_1735094684224",
+    "name": "微波炉",
+    "imageSrc": "http://localhost:8000/images/device_10_2af764e8-cac8-47f9-bb48-95f0ce4cf9ae.jpg",
+    "idlePower": "0.05",
+    "workingPower": "1200",
+    "workingHours": "0.04",
+    "workingDays": "30",
+    "enabled": true,
+    "group": "厨房"
   }
 ]

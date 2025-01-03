@@ -21,6 +21,10 @@ class DeviceHandler(SimpleHTTPRequestHandler):
                     data = f.read()
                 
                 self.send_response(200)
+                # 添加禁用缓存的响应头
+                self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
+                self.send_header('Pragma', 'no-cache')
+                self.send_header('Expires', '0')
                 self.send_header('Content-type', 'application/json')
                 self.send_header('Access-Control-Allow-Origin', '*')
                 self.end_headers()
@@ -29,6 +33,11 @@ class DeviceHandler(SimpleHTTPRequestHandler):
                 print(f"Error loading devices: {str(e)}")
                 self.send_error(500, str(e))
         else:
+            # 对于其他请求（如 HTML 文件），也添加禁用缓存的响应头
+            self.send_response(200)
+            self.send_header('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0')
+            self.send_header('Pragma', 'no-cache')
+            self.send_header('Expires', '0')
             return SimpleHTTPRequestHandler.do_GET(self)
 
     def do_POST(self):
