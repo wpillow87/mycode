@@ -21,6 +21,9 @@ class FileNameMatcher:
         # 存储文件对信息
         self.file_pairs = []
         
+        # 显示模式（True表示显示所有文件，False表示只显示匹配的文件对）
+        self.show_all_files = tk.BooleanVar(value=False)
+        
         # 创建文件对比区域
         self.create_comparison_area()
         
@@ -78,8 +81,8 @@ class FileNameMatcher:
         
         # 序号调整选项
         self.pad_numbers = tk.BooleanVar(value=False)
-        ttk.Checkbutton(left_frame, text="补齐序号位数", variable=self.pad_numbers, 
-                       command=self.refresh_display).pack(side=tk.LEFT, padx=5)
+        ttk.Checkbutton(left_frame, text="补齐序号位数", variable=self.pad_numbers).pack(side=tk.LEFT, padx=5)
+        ttk.Button(left_frame, text="应用补齐", command=self.apply_padding).pack(side=tk.LEFT, padx=5)
         
         # 图片后缀选项
         ttk.Label(left_frame, text="添加图片后缀:").pack(side=tk.LEFT, padx=5)
@@ -92,6 +95,10 @@ class FileNameMatcher:
         # 右侧确认按钮
         right_frame = ttk.Frame(button_frame)
         right_frame.pack(side=tk.RIGHT, padx=5)
+        
+        # 显示模式切换按钮
+        self.toggle_btn = ttk.Button(right_frame, text="只显示匹配文件", command=self.toggle_display_mode)
+        self.toggle_btn.pack(side=tk.RIGHT, padx=5)
         
         # 确认重命名按钮
         confirm_btn = ttk.Button(right_frame, text="确认全部重命名", command=self.apply_all_rename)
@@ -129,54 +136,69 @@ class FileNameMatcher:
     def process_folder(self, folder_path):
         files = os.listdir(folder_path)
         
-        # 将文件按序号分类
-        number_files = {}
-        for file in files:
-            number = self.get_number_from_filename(file)
-            if number is not None:
-                if number not in number_files:
-                    number_files[number] = {'image': None, 'video': None}
-                    
-                if self.is_image(file):
-                    number_files[number]['image'] = file
-                elif self.is_video(file):
-                    number_files[number]['video'] = file
-        
         # 清空现有数据
         for item in self.tree.get_children():
             self.tree.delete(item)
             
-        # 添加文件对到Treeview
-        self.file_pairs = []
-        for number, files in number_files.items():
-            if files['image'] and files['video']:
-                image_name = os.path.splitext(files['image'])[0]
-                video_name = os.path.splitext(files['video'])[0]
+        # 更新按钮文本
+        self.toggle_btn.configure(text="显示所有文件" if not self.show_all_files.get() else "只显示匹配文件")
+        
+        if self.show_all_files.get():
+            # 显示所有文件
+            for index, file in enumerate(sorted(files), 1):
+                display_number = str(index)
+                if self.pad_numbers.get():
+                    display_number = str(index).zfill(2)
                 
-                if image_name != video_name:
-                    # 如果选择补齐序号位数，则在显示时补齐
-                    display_number = str(number)
-                    if self.pad_numbers.get():
-                        display_number = str(number).zfill(2)
+                if self.is_image(file):
+                    self.tree.insert('', 'end', values=(display_number, "", file, "", ""))
+                elif self.is_video(file):
+                    self.tree.insert('', 'end', values=(display_number, "", "", "", file))
+        else:
+            # 将文件按序号分类
+            number_files = {}
+            for file in files:
+                number = self.get_number_from_filename(file)
+                if number is not None:
+                    if number not in number_files:
+                        number_files[number] = {'image': None, 'video': None}
+                        
+                    if self.is_image(file):
+                        number_files[number]['image'] = file
+                    elif self.is_video(file):
+                        number_files[number]['video'] = file
+            
+            # 添加文件对到Treeview
+            self.file_pairs = []
+            for number, files in number_files.items():
+                if files['image'] and files['video']:
+                    image_name = os.path.splitext(files['image'])[0]
+                    video_name = os.path.splitext(files['video'])[0]
                     
-                    self.file_pairs.append({
-                        'number': number,
-                        'image': files['image'],
-                        'video': files['video'],
-                        'choice': 'video'  # 默认选择视频文件名
-                    })
-                    
-                    # 使用特殊字符表示单选框状态
-                    image_radio = "○"
-                    video_radio = "●"  # 默认选中视频名
-                    
-                    self.tree.insert('', 'end', values=(
-                        display_number,
-                        image_radio,
-                        files['image'],
-                        video_radio,
-                        files['video']
-                    ))
+                    if image_name != video_name:
+                        # 如果选择补齐序号位数，则在显示时补齐
+                        display_number = str(number)
+                        if self.pad_numbers.get():
+                            display_number = str(number).zfill(2)
+                        
+                        self.file_pairs.append({
+                            'number': number,
+                            'image': files['image'],
+                            'video': files['video'],
+                            'choice': 'video'  # 默认选择视频文件名
+                        })
+                        
+                        # 使用特殊字符表示单选框状态
+                        image_radio = "○"
+                        video_radio = "●"  # 默认选中视频名
+                        
+                        self.tree.insert('', 'end', values=(
+                            display_number,
+                            image_radio,
+                            files['image'],
+                            video_radio,
+                            files['video']
+                        ))
         
         # 绑定单击事件来切换选择
         self.tree.bind('<ButtonRelease-1>', self.handle_click)
@@ -337,6 +359,44 @@ class FileNameMatcher:
         # 刷新显示
         self.process_folder(self.current_folder)
         messagebox.showinfo("完成", f"重命名完成，共处理 {renamed_count} 个文件对")
+
+    def apply_padding(self):
+        if not self.pad_numbers.get():
+            messagebox.showwarning("警告", "请先勾选'补齐序号位数'选项")
+            return
+            
+        files = os.listdir(self.current_folder)
+        renamed_count = 0
+        
+        for file in files:
+            name, ext = os.path.splitext(file)
+            number = self.get_number_from_filename(name)
+            if number is not None:
+                # 替换原有序号为补齐后的序号
+                old_number = str(number)
+                new_number = str(number).zfill(2)
+                if old_number != new_number:
+                    new_name = name.replace(old_number, new_number) + ext
+                    try:
+                        os.rename(
+                            os.path.join(self.current_folder, file),
+                            os.path.join(self.current_folder, new_name)
+                        )
+                        renamed_count += 1
+                    except OSError as e:
+                        messagebox.showerror("错误", f"重命名文件 {file} 时出错：{str(e)}")
+        
+        if renamed_count > 0:
+            messagebox.showinfo("完成", f"序号补齐完成，共处理 {renamed_count} 个文件")
+        else:
+            messagebox.showinfo("完成", "没有需要补齐序号的文件")
+        
+        # 刷新显示
+        self.process_folder(self.current_folder)
+
+    def toggle_display_mode(self):
+        self.show_all_files.set(not self.show_all_files.get())
+        self.process_folder(self.current_folder)
 
 if __name__ == "__main__":
     matcher = FileNameMatcher()
